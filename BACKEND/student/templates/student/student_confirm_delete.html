@@ -1,0 +1,25 @@
+{% extends "student/base.html" %}
+
+{% block content %}
+    <h1>Delete it here</h1>
+    <div class = "content-section">
+      <form method = "POST">
+            {% csrf_token %}
+            <fieldset class = "form-group">
+              <legend class = "border-bottom mb-4">
+                Are you sure you want to delete "{{ object.title }}"?
+              </legend>
+
+            </fieldset>
+            <div class="form-group">
+              <button type="submit" name="button" class="btn btn-outline-danger">
+                Yes,I am sure. Delete it!
+              </button>
+              <a href="{% url 'ann-detail' object.id %}"  class="btn btn-outline-secondary">
+                Cancel
+              </a>
+            </div>
+      </form>
+
+    </div>
+{% endblock content %}
