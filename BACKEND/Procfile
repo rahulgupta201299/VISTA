@@ -1,1 +1,0 @@
-web: gunicorn login_registeration_edit_prof.wsgi
