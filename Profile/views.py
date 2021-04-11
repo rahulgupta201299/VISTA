@@ -9,7 +9,7 @@ class ProfileView(generics.GenericAPIView,mixins.ListModelMixin,mixins.RetrieveM
     queryset=Profile.objects.all().order_by("-id")
     serializer_class=ProfileSerializer
     lookup_field="id"
-    def get(self,request,id=None,email=None):
+    def get(self,request,id=None):
         if id:
             return self.retrieve(request)
         else:

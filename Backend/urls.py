@@ -25,6 +25,7 @@ urlpatterns = [
     path('api-auth/',include('rest_framework.urls')),
     path('blog/',include('BlogPost.urls')),
     path('profile/',include('Profile.urls')),
+    path('checkout/',include('Payment.urls')),
     re_path(r'^.*',TemplateView.as_view(template_name='index.html')),
 ]
 
