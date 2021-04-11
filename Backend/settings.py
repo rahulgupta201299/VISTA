@@ -133,9 +133,9 @@ REST_FRAMWORK ={
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[
-    os.path.join(BASE_DIR,'FRONTEND/build/static')
+    os.path.join(BASE_DIR,'build/static')
 ]
-STATIC_ROOT=os.path.join(BASE_DIR,'FRONTEND/build/','staticroot/')
+STATIC_ROOT=os.path.join(BASE_DIR,'build/','staticroot/')
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 MEDIA_URL='/media/'
 CORS_ORIGIN_WHITELIST = (
